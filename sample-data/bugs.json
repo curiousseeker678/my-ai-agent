@@ -1,0 +1,44 @@
+{
+  "bugs": [
+    {
+      "id": "BUG-004",
+      "title": "Password reset email not delivered for Gmail accounts",
+      "desc": "Users with @gmail.com addresses report never receiving the password reset link. Hotmail and Outlook work fine. Likely an SPF/DKIM issue with our mail provider.",
+      "severity": "critical",
+      "status": "open",
+      "assignee": "sarah@dev.io",
+      "component": "Auth",
+      "created": "30 Apr 2026"
+    },
+    {
+      "id": "BUG-003",
+      "title": "Payment summary shows incorrect total when discount code applied",
+      "desc": "Applying a 20% discount code causes the order summary to display the pre-discount amount. The charge itself is correct — only the UI is wrong. Reproducible on all browsers.",
+      "severity": "high",
+      "status": "in-progress",
+      "assignee": "james@dev.io",
+      "component": "Payments",
+      "created": "29 Apr 2026"
+    },
+    {
+      "id": "BUG-002",
+      "title": "API rate limit returns 500 instead of 429",
+      "desc": "When a client exceeds the rate limit threshold the server throws a 500 Internal Server Error rather than the expected 429 Too Many Requests. This breaks client-side retry logic.",
+      "severity": "medium",
+      "status": "in-progress",
+      "assignee": "priya@dev.io",
+      "component": "API",
+      "created": "28 Apr 2026"
+    },
+    {
+      "id": "BUG-001",
+      "title": "Dark mode toggle state not persisted on page refresh",
+      "desc": "User preference for dark mode resets to light on every page reload. localStorage key is being set but not read correctly on init.",
+      "severity": "low",
+      "status": "resolved",
+      "assignee": "tom@dev.io",
+      "component": "UI",
+      "created": "27 Apr 2026"
+    }
+  ]
+}
